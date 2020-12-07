@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "Spotify"
+  ],
+  "cSpell.enableFiletypes": [
+    "javascript"
   ]
 }

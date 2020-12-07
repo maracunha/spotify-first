@@ -28,7 +28,9 @@ const StyledFirst = styled.main`
   }
 
   #page-content {
+    width: 100%;
     height: 86vh;
+    overflow: hidden;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
   }
@@ -46,6 +48,16 @@ const StyledFirst = styled.main`
   #page-content ul li {
     padding: 10px;
   }
+
+  #tracks ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+
+
 
   footer {
     background-color: ${props => props.theme.darkFooter};

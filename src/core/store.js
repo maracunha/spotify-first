@@ -1,5 +1,6 @@
 import { action, createStore, thunk, persist } from 'easy-peasy';
 import { client } from './api';
+// import data from '../mocks/search'
 
 const store = createStore({
   auth: persist({
@@ -18,21 +19,31 @@ const store = createStore({
   search: {
     loading: false,
     error: '',
-    data: null,
+    artists: null,
+    tracks: null,
+    episodes: null,
     setLoading: action((state, loading) => {
       state.loading = loading;
     }),
     setError: action((state, error) => {
       state.error = error;
     }),
-    setData: action((state, data) => {
-      state.data = data;
+    setArtists: action((state, artists) => {
+      state.artists = artists;
+    }),
+    setTracks: action((state, tracks) => {
+      state.tracks = tracks;
+    }),
+    setEpisodes: action((state, episodes) => {
+      state.episodes = episodes;
     }),
     searchArtist: thunk(async (actions, payload) => {
       actions.setLoading(true);
       try {
         const response = await client.get(`/search?q=${payload}&type=artist,track,episode`);
-        actions.setData(response.artists.items)
+        actions.setArtists(response.artists.items)
+        actions.setTracks(response.tracks.items)
+        actions.setEpisodes(response.episodes.items)
       } catch ({ error }) {
         console.log(error.message);
       }
