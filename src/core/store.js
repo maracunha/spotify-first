@@ -18,7 +18,7 @@ const store = createStore({
   }),
   search: {
     loading: false,
-    error: '',
+    error: null,
     artists: null,
     tracks: null,
     episodes: null,
@@ -45,7 +45,8 @@ const store = createStore({
         actions.setTracks(response.tracks.items)
         actions.setEpisodes(response.episodes.items)
       } catch ({ error }) {
-        console.log(error.message);
+        actions.setError(error.status)
+        console.error(error.message);
       }
       actions.setLoading(false);
     })

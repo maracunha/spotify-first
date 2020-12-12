@@ -19,16 +19,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   [https://developer.spotify.com/documentation/general/guides/authorization-guide/]
   * [ x ] search API | GET https://api.spotify.com/v1/search
   [https://developer.spotify.com/documentation/web-api/reference-beta/#category-search]
-* [  ] Get another logo and favicon on public
+* [ x ] Get another logo and favicon on public
 * [ x ] Do the first page with background and logo to connect to spotify
 * [ x ] Define how will be the layout of the search
-* [   ] Build routes
+* [ x ] Build routes
   * [ x ] login / callback with token
   * [ x ] first (with searches)
-  * [   ] 404
-* [  ] links to search with album and track
-* [  ] On main view, display all searched itens with photo in grid 
-* [  ] Build easy-peasy [https://easy-peasy.now.sh/] structure
+  * [ x ] 401
+* [ x ] links to search with album and track
+* [ x ] On main view, display all searched itens with photo in grid 
+* [ x ] Build easy-peasy [https://easy-peasy.now.sh/] structure
   * [ x ] Provider (store available to the app)
   * [ x ] store
   * [ x ] states
@@ -42,3 +42,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * [  ] reducers
   * [  ] thunk
   * [  ] actions
+* [  ] Styling First page
+  * [  ] links on left
+  * [  ] footer more beautiful
+  * [  ] make carrousel for the searches
+  
