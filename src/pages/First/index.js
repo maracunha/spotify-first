@@ -42,8 +42,8 @@ function First() {
 
         <div id="artists">
           <ul>
-          {artists && artists.map(artist => (
-          <li>
+          {artists && artists.map((artist, index) => (
+          <li key={index}>
             <img src={artist.images[0]?.url || spotify} alt="photoBand"/>
             {artist.name}
           </li>
@@ -54,14 +54,14 @@ function First() {
         <div id="tracks">
         <p>Musicas mais Listadas</p>
           <ul>
-            { tracks && tracks.map(artist => <li>{artist.name}</li>) }
+            { tracks && tracks.map((artist, index) => <li key={index}>{artist.name}</li>) }
           </ul>
         </div>
 
         <div id="episodes">
           <ul>
-          {episodes && episodes.map(artist => (
-          <li>
+          {episodes && episodes.map((artist, index) => (
+          <li key={index}>
             <img src={artist.images[0]?.url || spotify} alt="photoBand"/>
             {artist.name}
           </li>
