@@ -46,4 +46,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * [  ] links on left
   * [  ] footer more beautiful
   * [  ] make carrousel for the searches
-  
+ 
+ 
